@@ -1,0 +1,41 @@
+{
+  "name": "preenchedor",
+  "description": "Oferece características para realizar a criação de tabelas e o registro de dados nelas.",
+  "keywords": "registro tabelas banco de dados",
+  "version": "0.0.1",
+  "author": "Léo Felippe <leofelippedias@hotmail.com.br>",
+  "main": "./iniciar.js",
+  "dependencies": {
+    "sequelize-fixtures": "0.4.8",
+    "sequelize": "^3.5.1",
+    "express": "^4.13.3",
+    "bluebird": "3.0.0"
+  },
+  "devDependencies": {
+    
+  },
+  "repositories": [
+    {
+      "type": "git",
+      "path": "git@github.com:umdez/preenchedor.git"
+    }
+  ],
+  "homepage": "https://github.com/umdez/preenchedor#readme",
+  "bugs": "https://github.com/umdez/preenchedor/issues",
+  "maintainers": [
+    {
+      "name": "umdez",
+      "email": "leofelippedias@hotmail.com.br",
+      "url": "https://github.com/umdez"
+    }
+  ],
+  "contributors": [
+    "https://github.com/orgs/devowly/people"
+  ],
+  "license": "UNLICENSED",
+  "private": true,
+  "engines": {
+    "node": ">=0.4.0"
+  },
+  "bin": "./iniciar.js"
+}
