@@ -4,11 +4,11 @@
   "keywords": "registro tabelas banco de dados",
   "version": "0.0.1",
   "author": "Léo Felippe <leofelippedias@hotmail.com.br>",
-  "main": "./iniciar.js",
+  "main": "./biblioteca/iniciar.js",
   "dependencies": {
-    "sequelize-fixtures": "0.4.8",
     "sequelize": "^3.5.1",
-    "express": "^4.13.3",
+    "mysql": "2.9.0",
+    "sequelize-fixtures": "0.4.8",
     "bluebird": "3.0.0"
   },
   "devDependencies": {
@@ -37,5 +37,5 @@
   "engines": {
     "node": ">=0.4.0"
   },
-  "bin": "./iniciar.js"
+  "bin": "./biblioteca/iniciar.js"
 }
