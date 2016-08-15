@@ -20,6 +20,8 @@ para a diretiva de armazenamento. Abaixo listamos cada uma das propriedades requ
 |armazenamento| porta| numero| A porta utilizada para conexão com o nosso banco de dados. Exeto para o SQlite.|
 |armazenamento| seForForcarCriacaoDeNovasTabelas| boleano| Realiza a remoção das tabelas existentes e as cria novamente.|
 
+## Como utilizar
+
 Abaixo temos um exemplo.
 ```javascript
 config.armazenamento = {
