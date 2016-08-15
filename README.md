@@ -12,20 +12,27 @@ para a diretiva de armazenamento. Abaixo listamos cada uma das propriedades requ
 |armazenamento| usuario| texto| O nome do usuário do banco. Exceto para o SQLite.|
 |armazenamento| senha| texto | A nossa senha de conexão com o banco. Exeto para o SQlite.|
 |armazenamento| database| texto| O nome do banco utilizado.|
-|armazenamento| endereco| texto| O endereço do nosso banco de dados. Exeto para o SQlite.|
-|armazenamento| porta| numero| A porta utilizada para conexão com o nosso banco de dados. Exeto para o SQlite.|
 |armazenamento| seForForcarCriacaoDeNovasTabelas| boleano| Realiza a remoção das tabelas existentes e as cria novamente.|
 
 ## Como utilizar
 
-Abaixo temos um exemplo.
+Abaixo temos um exemplo básico de como realizar o preenchimento de modelos quaisquer.
 ```javascript
-config.armazenamento = {
+var Preenchedor = require('preenchedor');
+var dados = require('./a/pasta/com/os/dados/indice');
+var modelos = require('./a/pasta/com/os/modelos/indice');
+
+var aConfiguracaoPadrao = armazenamento = {
   "usuario": "leo"                  
 , "senha": "montes"                 
 , "database": "database"            
-, "endereco": "127.0.0.1"           
-, "porta": 3306      
 , "seForForcarCriacaoDeNovasTabelas": false  
 };
+
+var preenchedor = new Preenchedor(aConfiguracaoPadrao, dados, modelos);
+
+preenchedor.conectarAoBanco( function() {
+  // Carregamos aqui os dados.
+  preenchedor.armazenarOsDados();
+});
 ```
