@@ -71,7 +71,7 @@ Preenchedor.prototype.conectarAoBanco = function (cd) {
   this.carregarOsModelos();
   
   // Sincroniza os modelos com o banco de dados.
-  sequelize.sync().then(function() {
+  sequelize.sync({ "force": this.aConfiguracao.seForForcarCriacaoDeNovasTabelas }).then(function() {
     registrador.debug('Banco de dados sincronizado.');
     cd();
   }).catch(function(erro){
