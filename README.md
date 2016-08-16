@@ -36,3 +36,27 @@ preenchedor.conectarAoBanco( function() {
   preenchedor.armazenarOsDados();
 });
 ```
+
+## Exemplo utilizando JSON
+
+```json
+[
+  {
+    "model": "Foo",
+    "data": {
+      "propA": "bar",
+      "propB": 1
+    }
+  },
+  {
+    "model": "Foo",
+    "data": {
+      "propA": "baz",
+      "propB": 3
+    }
+  }
+]
+```
+
+## Mais informações
+- https://github.com/domasx2/sequelize-fixtures
