@@ -46,7 +46,7 @@ Preenchedor.prototype.armazenarOsDados = function () {
  
   // Carregamos aqueles arquivos json que contem os registros que serão
   // armazenados no Banco de Dados
-  this.osDados(sequelize_fixtures, this.listaModelos);
+  this.osDados(sequelize_fixtures, this.listaDosModelos);
 };
 
 /* Realiza a conexão com o banco de dados. e depois o sincroniza. Quando for
