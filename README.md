@@ -37,22 +37,21 @@ preenchedor.conectarAoBanco( function() {
 });
 ```
 
-## Exemplo utilizando JSON
-
+Um exemplo de arquivo a ser carregado:
 ```json
 [
   {
-    "model": "Foo",
+    "model": "Projetos",
     "data": {
-      "propA": "bar",
-      "propB": 1
+      "id": 1,
+      "propriedade": "algum texto..."
     }
   },
   {
-    "model": "Foo",
+    "model": "Projetos",
     "data": {
-      "propA": "baz",
-      "propB": 3
+      "id": 2,
+      "propriedade": "algum texto..."
     }
   }
 ]
