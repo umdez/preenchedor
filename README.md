@@ -37,7 +37,7 @@ preenchedor.conectarAoBanco( function() {
 });
 ```
 
-Um exemplo de arquivo a ser carregado:
+Um exemplo de um arquivo no formato JSON que será carregado:
 ```json
 [
   {
