@@ -58,4 +58,4 @@ Um exemplo de um arquivo no formato JSON que será carregado:
 ```
 
 ## Mais informações
-O preenchedor é apenas um arcabouço que utiliza extensivamento o projeto [sequelize-fixtures](https://github.com/domasx2/sequelize-fixtures). 
+O preenchedor é apenas um arcabouço que utiliza extensivamento o projeto [sequelize-fixtures](https://github.com/domasx2/sequelize-fixtures). Caso você esteja mais interessado no assunto é recomendavel acessar a página oficial do projeto.
