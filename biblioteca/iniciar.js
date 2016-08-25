@@ -18,7 +18,7 @@ var Promessa = require('bluebird');
 /* Provê metodos e funções de iniciar a conexão com o banco de dados, carregar os
  * modelos do banco, e preencher o banco com os dados.
  */
-var Preenchedor = function(configuracao, dados, modelos) {
+var Preenchedor = function(configuracao, modelos, dados) {
   this.bd = null;
   this.listaDosModelos = {};
   this.osModelos = modelos;
@@ -43,10 +43,14 @@ Preenchedor.prototype.carregarOsModelos = function () {
 Preenchedor.prototype.armazenarOsDados = function () { 
 
   registrador.debug('Carregando dados de preenchimento do banco de dados.');
- 
-  // Carregamos aqueles arquivos json que contem os registros que serão
+  
+  // Carregamos aqueles arquivos que contem os registros que serão
   // armazenados no Banco de Dados
-  this.osDados(sequelize_fixtures, this.listaDosModelos);
+  this.osDados.forEach(function (item) {
+    sequelize_fixtures.loadFile(item.arquivo, this.listaDosModelos).then(function(){
+      registrador.debug('Carregado arquivo '+ item.arquivo +' de dados.');
+    });
+  }); 
 };
 
 /* Realiza a conexão com o banco de dados. e depois o sincroniza. Quando for
