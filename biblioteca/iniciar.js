@@ -33,7 +33,7 @@ var Preenchedor = function(configuracao, modelos, dados) {
 Preenchedor.prototype.carregarOsModelos = function () {
   
   registrador.debug('Carregando os modelos do banco de dados.');
-  
+
   // Carrega todos modelos e cada um deles é adicionado a listaModelos.
   this.osModelos(this.bd, this.listaDosModelos);
 };
@@ -41,13 +41,14 @@ Preenchedor.prototype.carregarOsModelos = function () {
 /* Realiza a leitura e armazenamento dos dados.
  */
 Preenchedor.prototype.armazenarOsDados = function () { 
+  var meuObj = this;
 
   registrador.debug('Carregando dados de preenchimento do banco de dados.');
   
   // Carregamos aqueles arquivos que contem os registros que serão
   // armazenados no Banco de Dados
   this.osDados.forEach(function (item) {
-    sequelize_fixtures.loadFile(item.arquivo, this.listaDosModelos).then(function(){
+    sequelize_fixtures.loadFile(item.arquivo, meuObj.listaDosModelos).then(function(){
       registrador.debug('Carregado arquivo '+ item.arquivo +' de dados.');
     });
   }); 
