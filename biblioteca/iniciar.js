@@ -48,8 +48,11 @@ Preenchedor.prototype.armazenarOsDados = function () {
   // Carregamos aqueles arquivos que contem os registros que serão
   // armazenados no Banco de Dados
   this.osDados.forEach(function (item) {
-    sequelize_fixtures.loadFile(item.arquivo, meuObj.listaDosModelos).then(function(){
-      registrador.debug('Carregado arquivo '+ item.arquivo +' de dados.');
+    return new Promessa(function (deliberar, recusar) {
+      sequelize_fixtures.loadFile(item.arquivo, meuObj.listaDosModelos).then(function(){
+        registrador.debug('Carregado arquivo '+ item.arquivo +' de dados.');
+        deliberar();
+      });
     });
   }); 
 };
